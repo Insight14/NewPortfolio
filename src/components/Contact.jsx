@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
+// Initialize EmailJS with your Public Key
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },

@@ -15,6 +15,11 @@ const staggerContainer = {
 };
 
 export const Projects = () => {
+
+  const handleCoDriverClick = () => {
+    window.open("https://github.com/acm-projects/CoDriver", "_blank", "noopener,noreferrer");
+  };
+  
   return (
     <motion.section
       id="projects"
@@ -46,18 +51,17 @@ export const Projects = () => {
         >
           <motion.div
             className="project-image"
-            style={{ backgroundImage: "url('/projects/ai-saas.png')" }}
+            style={{ backgroundImage: "url('/projects/MAGIC8BALL.gif')" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           />
-          <h3> AI SaaS Platform</h3>
+          <h3>iPhone 8-Ball</h3>
           <p>
-            A modern SaaS platform built with Next.js and OpenAI integration,
-            featuring real-time AI-powered content generation and analytics.
+          Simple lucky 8-Ball Game that generates a random response when the 
+          user shakes their device.
           </p>
           <div className="project-tech">
-            <span>Next.js</span>
-            <span>OpenAI</span>
-            <span>TailwindCSS</span>
+            <span>SwiftUI</span>
+            <span>StoryBoard</span>
           </div>
         </motion.div>
 
@@ -65,23 +69,28 @@ export const Projects = () => {
           className="project-card"
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          onClick={handleCoDriverClick} // <--- ADD THIS onClick HANDLER
+          style={{ cursor: 'pointer' }} // <--- ADD THIS STYLE for visual cue
         >
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/social-media.png')",
+              backgroundImage: "url('/projects/CoDriver.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           />
-          <h3>Social Media Dashboard</h3>
+          
+          <h3>CoDriver</h3>
           <p>
-            A comprehensive social media management dashboard with analytics,
-            scheduling, and engagement tracking features.
+          A conversational AI assistant mobile app designed to keep you safe, 
+          focused, and engaged on the road. It monitors your behavior, provides real-time feedback 
+          while driving, and engages conversations about your route.
           </p>
           <div className="project-tech">
-            <span>React</span>
+            <span>React Native</span>
             <span>Node.js</span>
+            <span>Express.js</span>
             <span>MongoDB</span>
           </div>
         </motion.div>
@@ -94,22 +103,24 @@ export const Projects = () => {
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/stopwatch.png')",
+              backgroundImage: "url('/projects/RGBGame-3.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           />
-          <h3>Productivity Timer</h3>
+          <h3>RGB Color Matcher</h3>
           <p>
-            A sleek productivity timer application with customizable work
-            sessions, statistics tracking, and dark mode support.
+          Match a random color, provided by the system, by using Red, Green, 
+          and Blue sliders to adjust the RBG hex values to form the color
           </p>
           <div className="project-tech">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>TailwindCSS</span>
+            <span>SwiftUI</span>
+            <span>StoryBoard</span>
+            <span>React Native (Separate)</span>
           </div>
         </motion.div>
+
+        
       </motion.div>
     </motion.section>
   );

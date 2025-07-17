@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logoImage from '../../src/assets/Portologoo.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -27,7 +28,8 @@ export const Navbar = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        Portfolio
+        {/* Replace "Portfolio" text with an <img> tag */}
+        <img src={logoImage} alt="Portfolio Logo" className="logo-image" />
       </motion.div>
 
       <motion.ul

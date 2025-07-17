@@ -40,30 +40,32 @@ export const Hero = () => {
             variants={fadeInUp}
             whileHover={{ scale: 1.02 }}
           >
-            PedroTech
+            Sourish Reddy
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
-            {" "}
-            Creative Developer & Designer
+            <span className="subtitle-white">Sophomore @</span>{' '}
+            <span className="subtitle-orange">UT Dallas</span>
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I craft beautiful digital experiences that combine stunning design
-            with powerful functionality. Specializing in modern web applications
-            and interactive user interfaces.
+            I am a college student and an aspiring AI & Security Engineer based in Dallas, TX. 
+            My current interests lie in web and app development, with a good knowledge of REST API's, 
+            React, Python, etc. 
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
-              href="#projects"
+              href="https://docs.google.com/document/d/1qwaJ574Kc-ovLPd4fiw3u4pHDUBEZpg46GKzxfBQOk4/edit?usp=sharing" // <--- IMPORTANT: Update this path to your PDF file name
+              target="_blank"             // <--- Opens the link in a new tab
+              rel="noopener noreferrer"   // <--- Security best practice for target="_blank"
               className="cta-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {" "}
-              View My Work
+              View My Resume
             </motion.a>
             <motion.a
-              href="#contacts"
+              href="#contact" // Corrected from #contacts to #contact based on App.css
               className="cta-secondary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -72,14 +74,14 @@ export const Hero = () => {
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://github.com" target="_blank">
+            <motion.a href="https://github.com/Insight14" target="_blank">
               <i className="fab fa-github"> </i>
             </motion.a>
-            <motion.a href="https://linkedin.com" target="_blank">
+            <motion.a href="https://www.linkedin.com/in/sri-satya-sourish-reddy/" target="_blank">
               <i className="fab fa-linkedin"> </i>
             </motion.a>
-            <motion.a href="https://twitter.com" target="_blank">
-              <i className="fab fa-twitter"> </i>
+            <motion.a href="https://www.instagram.com/sourish._.ssr/" target="_blank">
+              <i className="fab fa-instagram"> </i>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -98,30 +100,38 @@ export const Hero = () => {
                 padding: "2rem",
                 height: "100%",
                 borderRadius: "20px",
-                background: "rgba(30, 41, 59, 0.8)",
+                background: "rgba(0, 0, 0, 0.8)",
                 backdropFilter: "blur(10px)",
                 marginBottom: 50,
               }}
               style={vscDarkPlus}
             >
-              {`const aboutMe: DeveloperProfile = {
-  codename: "PedroTech",
-  origin: "🌍 Somewhere between a coffee shop and a terminal",
-  role: "Fullstack Web Sorcerer",
-  stack: {
-    languages: ["JavaScript", "TypeScript", "SQL"],
-    frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
-  },
-  traits: [
-    "pixel-perfectionist",
-    "API whisperer",
-    "dark mode advocate",
-    "terminal aesthetic enthusiast",
-  ],
-  missionStatement:
-    "Turning ideas into interfaces and bugs into feature",
-  availability: "Available for hire",
-};`}
+              
+  {`const aboutMe: DeveloperProfile = 
+  {
+      username: "Insight14",
+      origin: "Hyderabad, TL, India",
+      role: "Full Time Student"
+            "Part Time Gamer"
+            "Overtime Programmer"
+            "Certified grass toucher",
+      skills: {
+        coding languages: ["Java", "C/C++", "Python", "Swift", "HTML/CSS", "Javascript/Typescript"],
+        frameworks: ["React", "Vite", "Next.js", "Express.js", "Vue", "TailwindCSS"]
+        languages: ["English", "Telugu", "Hindi", "Spanish", "Japanese"]
+      },
+      traits: [
+        "strategic slacker",
+        "code whisperer",
+        "brackets-balanced believer",
+        "refactor evangelist",
+      ],
+      missionStatement:
+        "Making the world a more compile-able place.",
+      availability: "#opentowork"
+                    "#opentoconnect",
+    };`
+    }
             </SyntaxHighlighter>
           </div>
 
@@ -134,7 +144,7 @@ export const Hero = () => {
               <span className="card-icon"> 💻 </span>
               <span className="card-text">
                 {" "}
-                Currently working on something awesome!
+                Currently exploring Cascadeur!
               </span>
             </div>
           </motion.div>

@@ -5,17 +5,15 @@
 }
 
 :root {
-  --primary-color: #7c3aed;
+  --primary-color: #0f203a;
   --primary-dark: #5b21b6;
   --secondary-color: #db2777;
-  --accent-color: #f472b6;
-  --text-color: #e2e8f0;
+  --accent-color: #ffffff ;
+  --text-color: #ffffff;
   --light-text: #94a3b8;
   --background: #0f172a;
   --section-bg: #1e293b;
   --card-bg: #1e293b;
-  --gradient-start: #7c3aed;
-  --gradient-end: #db2777;
   --nav-bg: rgba(15, 23, 42, 0.8);
   --card-border: rgba(148, 163, 184, 0.1);
 }
@@ -47,7 +45,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
+  padding: 1.2rem 5%;
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -55,11 +53,32 @@ body {
   border-bottom: 1px solid var(--card-border);
 }
 
+.logo-image {
+  height: 50px; /* Adjust this value to your desired height */
+  width: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Helps align the image with text if any */
+  /* You might also want to add a slight animation or filter on hover */
+  transition: transform 0.3s ease;
+}
+
+/* If you want the scale effect on the image itself, instead of the container */
+.logo:hover .logo-image {
+  transform: scale(1.05); /* Apply the scale effect directly to the image */
+}
+
+/* You can remove the font-related styles from .logo if it only contains an image */
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
+  /* font-size: 1.5rem; */ /* Remove or comment out */
+  /* font-weight: 700; */ /* Remove or comment out */
+  /* color: var(--accent-color); */ /* Remove or comment out */
+  /* text-shadow: 0 0 10px rgba(244, 114, 182, 0.3); */ /* Remove or comment out */
+
+  /* Keep these if you want the container to still have them */
+  position: relative;
+  cursor: pointer;
+  display: flex; /* Helps in centering or aligning the image within the div */
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image (if needed) */
 }
 
 .nav-links {
@@ -100,11 +119,13 @@ body {
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    var(--gradient-start) 0%,
-    var(--gradient-end) 100%
-  );
+  background-image: url('../src/assets/main3.jpg');
+  background-size: cover; /* This makes the image cover the entire hero section */
+  background-position: center; /* This centers the image within the section */
+  background-repeat: no-repeat; /* Prevents the image from tiling if it's small */
+  /* You can add a fallback background color in case the image fails to load */
+  background-color: #0f172a; /* Or any dark color that complements your image */
+
 
   display: flex;
   align-items: center;
@@ -153,9 +174,18 @@ body {
 
 .hero-subtitle {
   font-size: 2rem;
-  color: var(--accent-color);
+  color: var(--accent-color); /* This is the default. We'll override parts of it. */
   margin-bottom: 1.5rem;
   font-weight: 600;
+}
+
+/* Add these new rules for the specific text colors */
+.hero-subtitle .subtitle-white {
+  color: white; /* Make this part white */
+}
+
+.hero-subtitle .subtitle-orange {
+  color: #e87500; 
 }
 
 .hero-description {
@@ -377,7 +407,7 @@ body {
 }
 
 .project-image {
-  height: 240px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   position: relative;
