@@ -2,6 +2,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
+import { Hobbies } from "./components/Hobbies";
 import { Contact } from "./components/Contact";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -21,6 +22,7 @@ function App() {
 
       <Hero />
       <Projects />
+      <Hobbies />
       <Contact />
 
       <motion.footer

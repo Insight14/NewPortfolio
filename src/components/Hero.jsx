@@ -43,20 +43,20 @@ export const Hero = () => {
             Sourish Reddy
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
-            <span className="subtitle-white">Sophomore @</span>{' '}
+            <span className="subtitle-white">CS + Data Science @</span>{' '}
             <span className="subtitle-orange">UT Dallas</span>
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
             I am a college student and an aspiring AI & Security Engineer based in Dallas, TX. 
-            My current interests lie in web and app development, with a good knowledge of REST API's, 
-            React, Python, etc. 
+            My current interests lie in web and app development, with a good knowledge of React, 
+            Python, REST API's, etc. 
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
-              href="https://docs.google.com/document/d/1qwaJ574Kc-ovLPd4fiw3u4pHDUBEZpg46GKzxfBQOk4/edit?usp=sharing" // <--- IMPORTANT: Update this path to your PDF file name
-              target="_blank"             // <--- Opens the link in a new tab
-              rel="noopener noreferrer"   // <--- Security best practice for target="_blank"
+              href="/projects/Sourish_Reddy_Update_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -117,7 +117,7 @@ export const Hero = () => {
             "Certified grass toucher",
       skills: {
         coding languages: ["Java", "C/C++", "Python", "Swift", "HTML/CSS", "Javascript/Typescript"],
-        frameworks: ["React", "Vite", "Next.js", "Express.js", "Vue", "TailwindCSS"]
+        frameworks: ["React", "Uvicorn", "Node.js", "Express.js", "FastAPI", "Vue", "TailwindCSS"]
         languages: ["English", "Telugu", "Hindi", "Spanish", "Japanese"]
       },
       traits: [
@@ -144,7 +144,7 @@ export const Hero = () => {
               <span className="card-icon"> 💻 </span>
               <span className="card-text">
                 {" "}
-                Currently exploring Cascadeur!
+                Currently exploring Kubernetes!
               </span>
             </div>
           </motion.div>

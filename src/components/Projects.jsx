@@ -15,10 +15,51 @@ const staggerContainer = {
 };
 
 export const Projects = () => {
-
-  const handleCoDriverClick = () => {
-    window.open("https://github.com/acm-projects/CoDriver", "_blank", "noopener,noreferrer");
+  const openProjectLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
+
+  const projects = [
+    {
+      title: "MedVisit",
+      description:
+        "MedVisit is a comprehensive healthcare consultation platform that bridges the gap between doctors and patients through intelligent AI-powered analysis using SOAP format and accessible reporting through an intuitive EMR dashboard.",
+      imageStyle: "url('/projects/medvisit-diagram.png'), url('/projects/ai-saas.png')",
+      tech: ["Python", "React.js", "Llama 3.1", "TwelveLabs", "FastAPI"],
+      url: "https://devpost.com/software/medvisit",
+    },
+    {
+      title: "CoDriver",
+      description:
+        "A conversational AI assistant mobile app designed to keep you safe, focused, and engaged on the road. It monitors your behavior, provides real-time feedback while driving, and engages conversations about your route.",
+      image: "/projects/CoDriver.png",
+      tech: ["React Native", "Node.js", "Express.js", "MongoDB", "Claude Sonnet 3.7"],
+      url: "https://github.com/acm-projects/CoDriver",
+    },
+    {
+      title: "SubSlash",
+      description:
+        "AI subscription manager that helps you track subscriptions and get suggestions on them. It uses a combination of LLMs and web scraping to analyze your subscriptions and provide insights on how to optimize them.",
+      image: "/projects/SubSlash.png",
+      tech: ["React Native", "Python", "Express.js", "Supabase", "Claude Sonnet 3.7", "BeautifulSoap"],
+      url: "https://github.com/Insight14/SubSlash",
+    },
+    {
+      title: "RGB Color Matcher",
+      description:
+        "Match a random color, provided by the system, by using Red, Green, and Blue sliders to adjust the RBG hex values to form the color",
+      image: "/projects/RGBGame-3.png",
+      tech: ["SwiftUI", "StoryBoard", "React Native (Separate)"],
+    },
+    {
+      title: "iPhone 8-Ball",
+      description:
+        "Simple lucky 8-Ball Game that generates a random response when the user shakes their device.",
+      image: "/projects/MAGIC8BALL.gif",
+      tech: ["SwiftUI", "StoryBoard"],
+    }
+    
+  ];
   
   return (
     <motion.section
@@ -44,81 +85,32 @@ export const Projects = () => {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
-        >
+        {projects.map((project) => (
           <motion.div
-            className="project-image"
-            style={{ backgroundImage: "url('/projects/MAGIC8BALL.gif')" }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-          />
-          <h3>iPhone 8-Ball</h3>
-          <p>
-          Simple lucky 8-Ball Game that generates a random response when the 
-          user shakes their device.
-          </p>
-          <div className="project-tech">
-            <span>SwiftUI</span>
-            <span>StoryBoard</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          onClick={handleCoDriverClick} // <--- ADD THIS onClick HANDLER
-          style={{ cursor: 'pointer' }} // <--- ADD THIS STYLE for visual cue
-        >
-          <motion.div
-            className="project-image"
-            style={{
-              backgroundImage: "url('/projects/CoDriver.png')",
-            }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
-          
-          <h3>CoDriver</h3>
-          <p>
-          A conversational AI assistant mobile app designed to keep you safe, 
-          focused, and engaged on the road. It monitors your behavior, provides real-time feedback 
-          while driving, and engages conversations about your route.
-          </p>
-          <div className="project-tech">
-            <span>React Native</span>
-            <span>Node.js</span>
-            <span>Express.js</span>
-            <span>MongoDB</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
-        >
-          <motion.div
-            className="project-image"
-            style={{
-              backgroundImage: "url('/projects/RGBGame-3.png')",
-            }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
-          <h3>RGB Color Matcher</h3>
-          <p>
-          Match a random color, provided by the system, by using Red, Green, 
-          and Blue sliders to adjust the RBG hex values to form the color
-          </p>
-          <div className="project-tech">
-            <span>SwiftUI</span>
-            <span>StoryBoard</span>
-            <span>React Native (Separate)</span>
-          </div>
-        </motion.div>
+            key={project.title}
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+            onClick={project.url ? () => openProjectLink(project.url) : undefined}
+            style={{ cursor: project.url ? "pointer" : "default" }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: project.imageStyle || `url('${project.image}')`,
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="project-tech">
+              {project.tech.map((stack) => (
+                <span key={`${project.title}-${stack}`}>{stack}</span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
 
         
       </motion.div>
