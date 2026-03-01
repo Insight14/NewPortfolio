@@ -21,14 +21,6 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "MedVisit",
-      description:
-        "MedVisit is a comprehensive healthcare consultation platform that bridges the gap between doctors and patients through intelligent AI-powered analysis using SOAP format and accessible reporting through an intuitive EMR dashboard.",
-      imageStyle: "url('/projects/medvisit-diagram.png'), url('/projects/ai-saas.png')",
-      tech: ["Python", "React.js", "Llama 3.1", "TwelveLabs", "FastAPI"],
-      url: "https://devpost.com/software/medvisit",
-    },
-    {
       title: "CoDriver",
       description:
         "A conversational AI assistant mobile app designed to keep you safe, focused, and engaged on the road. It monitors your behavior, provides real-time feedback while driving, and engages conversations about your route.",
@@ -37,12 +29,36 @@ export const Projects = () => {
       url: "https://github.com/acm-projects/CoDriver",
     },
     {
+      title: "MedVisit",
+      description:
+        "MedVisit is a comprehensive healthcare consultation platform that bridges the gap between doctors and patients through intelligent AI-powered analysis using SOAP format and accessible reporting through an intuitive EMR dashboard.",
+      imageStyle: "url('/projects/medvisit-diagram.png'), url('/projects/ai-saas.png')",
+      tech: ["Python", "React.js", "Llama 3.1", "TwelveLabs", "FastAPI"],
+      url: "https://devpost.com/software/medvisit",
+    },
+    {
       title: "SubSlash",
       description:
         "AI subscription manager that helps you track subscriptions and get suggestions on them. It uses a combination of LLMs and web scraping to analyze your subscriptions and provide insights on how to optimize them.",
       image: "/projects/SubSlash.png",
-      tech: ["React Native", "Python", "Express.js", "Supabase", "Claude Sonnet 3.7", "BeautifulSoap"],
+      tech: ["React Native", "Python", "Express.js", "Node.js", "Supabase", "Claude Sonnet 3.7", "BeautifulSoap"],
       url: "https://github.com/Insight14/SubSlash",
+    },
+    {
+      title: "NavStack",
+      description:
+        "A browser navigation system built from scratch using custom LinkedList, Stack, and Circular Array implementations with session persistence.",
+      image: "/projects/NavStack.png",
+      tech: ["Java"],
+      url: "https://github.com/Insight14/NavStack",
+    },
+    {
+      title: "BinaryGame",
+      description:
+        "A simple binary to hex to decimal numbers conversion game made using MIPS Assembly. Contains 10 levels for which ever mode the user wishes to select and play/practice.",
+      image: "/projects/BinaryGame.png",
+      tech: ["Assembly (MIPS)"],
+      url: "https://github.com/Insight14/BinaryGame",
     },
     {
       title: "RGB Color Matcher",

@@ -25,7 +25,7 @@ export const Hobbies = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <h2>Hobbies</h2>
+      <h2>Hobbies & Interests</h2>
 
       <div className="hobbies-track">
         {marqueeItems.map((hobby, index) => (
