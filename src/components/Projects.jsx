@@ -45,6 +45,14 @@ export const Projects = () => {
       url: "https://github.com/Insight14/SubSlash",
     },
     {
+      title: "Ask-and-Forget",
+      description:
+        "Smart Reminders is a context-aware notification system that replaces time-based alerts with intelligent triggers like location, weather, and real-world conditions using AI and cloud services. Built with FastAPI, Firebase, and Gemini API to transform natural language into automated actions.",
+      image: "/projects/Ask-and-Forget.png",
+      tech: ["Python", "FastAPI", "Firebase", "Gemini API", "Uvicorn"],
+      url: "https://github.com/Pranav593/ask-and-forget",
+    },
+    {
       title: "NavStack",
       description:
         "A browser navigation system built from scratch using custom LinkedList, Stack, and Circular Array implementations with session persistence.",
