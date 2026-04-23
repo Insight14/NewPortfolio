@@ -9,14 +9,23 @@ import angularLogo from "../assets/angular.png";
 import arduinoLogo from "../assets/arduino.png";
 import awsLogo from "../assets/aws.png";
 import cppLogo from "../assets/c++.svg";
+import djangoLogo from "../assets/Django-Logo.png";
 import fastapiLogo from "../assets/fastapi.png";
+import figmaLogo from "../assets/Figma-logo.svg.png";
+import ibmLogo from "../assets/IBM_watsonx_logo.svg.png";
 import javaLogo from "../assets/Java-Logo.svg.png";
+import langchainLogo from "../assets/langchain.png";
+import langgraphLogo from "../assets/langgraph.png";
 import linuxLogo from "../assets/linux.webp";
+import mongodbLogo from "../assets/mongodb.avif";
 import nodeLogo from "../assets/node.png";
+import postmanLogo from "../assets/postman-icon.webp";
 import pythonLogo from "../assets/python.svg.png";
 import reactLogo from "../assets/react.png";
+import sqlLogo from "../assets/SQL.png";
 import swiftLogo from "../assets/swift.png";
 import vueLogo from "../assets/vue.png";
+import wiresharkLogo from "../assets/Wireshark_icon.svg.png";
 import azureLogo from "../assets/Microsoft_Azure_Logo.svg.png";
 
 const fadeInUp = {
@@ -44,27 +53,50 @@ const generateRandomDrift = () => {
 
 const generateRandomSize = (baseSize) => {
   const basePx = parseInt(baseSize);
-  const randomSize = basePx + Math.random() * (basePx * 0.35);
+  const randomSize = basePx + Math.random() * (basePx * 0.2);
   return Math.round(randomSize) + "px";
 };
 
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+const spreadLogoPosition = (x, y) => {
+  const xValue = parseFloat(x);
+  const yValue = parseFloat(y);
+  const spreadX = clamp(50 + (xValue - 50) * 1.18, 7, 93);
+  const spreadY = clamp(50 + (yValue - 50) * 1.14, 8, 92);
+  return {
+    x: `${spreadX}%`,
+    y: `${spreadY}%`,
+  };
+};
+
 const techLogosData = [
-  { name: "React", src: reactLogo, x: "8%", y: "12%", size: "86px", z: 3 },
-  { name: "Node.js", src: nodeLogo, x: "28%", y: "8%", size: "82px", z: 5 },
-  { name: "Python", src: pythonLogo, x: "54%", y: "10%", size: "84px", z: 4 },
-  { name: "AWS", src: awsLogo, x: "78%", y: "15%", size: "84px", z: 4 },
-  { name: "Azure", src: azureLogo, x: "92%", y: "38%", size: "90px", z: 6 },
-  { name: "FastAPI", src: fastapiLogo, x: "18%", y: "35%", size: "80px", z: 5 },
-  { name: "Angular", src: angularLogo, x: "44%", y: "48%", size: "84px", z: 4 },
-  { name: "Vue", src: vueLogo, x: "68%", y: "42%", size: "86px", z: 5 },
-  { name: "Arduino", src: arduinoLogo, x: "12%", y: "65%", size: "84px", z: 6 },
-  { name: "Linux", src: linuxLogo, x: "38%", y: "72%", size: "80px", z: 4 },
-  { name: "C++", src: cppLogo, x: "62%", y: "68%", size: "80px", z: 3 },
-  { name: "Java", src: javaLogo, x: "82%", y: "75%", size: "82px", z: 5 },
-  { name: "Swift", src: swiftLogo, x: "28%", y: "88%", size: "80px", z: 4 },
+  { name: "React", src: reactLogo, x: "10%", y: "12%", size: "86px", z: 3 },
+  { name: "Node.js", src: nodeLogo, x: "24%", y: "9%", size: "82px", z: 5 },
+  { name: "Python", src: pythonLogo, x: "47%", y: "10%", size: "84px", z: 4 },
+  { name: "AWS", src: awsLogo, x: "68%", y: "14%", size: "84px", z: 4 },
+  { name: "IBM", src: ibmLogo, x: "58%", y: "24%", size: "80px", z: 5 },
+  { name: "Figma", src: figmaLogo, x: "80%", y: "16%", size: "80px", z: 5 },
+  { name: "Azure", src: azureLogo, x: "75%", y: "36%", size: "90px", z: 6 },
+  { name: "FastAPI", src: fastapiLogo, x: "16%", y: "34%", size: "80px", z: 5 },
+  { name: "Django", src: djangoLogo, x: "8%", y: "52%", size: "84px", z: 5 },
+  { name: "Angular", src: angularLogo, x: "37%", y: "46%", size: "84px", z: 4 },
+  { name: "Vue", src: vueLogo, x: "58%", y: "43%", size: "86px", z: 5 },
+  { name: "MongoDB", src: mongodbLogo, x: "82%", y: "46%", size: "80px", z: 5 },
+  { name: "LangChain", src: langchainLogo, x: "71%", y: "55%", size: "82px", z: 5 },
+  { name: "Arduino", src: arduinoLogo, x: "19%", y: "67%", size: "84px", z: 6 },
+  { name: "Linux", src: linuxLogo, x: "33%", y: "74%", size: "80px", z: 4 },
+  { name: "LangGraph", src: langgraphLogo, x: "42%", y: "82%", size: "82px", z: 6 },
+  { name: "C++", src: cppLogo, x: "60%", y: "62%", size: "80px", z: 3 },
+  { name: "Postman", src: postmanLogo, x: "12%", y: "82%", size: "82px", z: 5 },
+  { name: "Java", src: javaLogo, x: "67%", y: "69%", size: "82px", z: 5 },
+  { name: "Wireshark", src: wiresharkLogo, x: "82%", y: "80%", size: "84px", z: 5 },
+  { name: "SQL", src: sqlLogo, x: "47%", y: "83%", size: "80px", z: 5 },
+  { name: "Swift", src: swiftLogo, x: "24%", y: "87%", size: "80px", z: 4 },
 ];
 
 const techLogos = techLogosData.map((logo) => ({
+  ...spreadLogoPosition(logo.x, logo.y),
   ...logo,
   size: generateRandomSize(logo.size),
   ...generateRandomDrift(),
@@ -215,6 +247,11 @@ export const Hero = () => {
                   y: [0, tech.driftY],
                   rotate: [-2, 2],
                   scale: [0.95, 1.05, 0.95],
+                  filter: [
+                    "brightness(0.9) saturate(1)",
+                    "brightness(1.28) saturate(1.45)",
+                    "brightness(0.9) saturate(1)",
+                  ],
                   opacity: [0.05, 0.88, 0.05],
                 }}
                 transition={{
