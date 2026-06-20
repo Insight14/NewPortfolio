@@ -192,7 +192,7 @@ export const Hero = () => {
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
-              href="/projects/SourishR_Resume.pdf"
+              href="/projects/Sourish_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-primary"
