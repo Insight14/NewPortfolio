@@ -21,6 +21,14 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Uber Stall Guard",
+      description:
+        "AI-based prototype that detects driver-stalling behavior on rideshare trips and auto-waives rider cancellation fees. Independent concept project, not affiliated with Uber, but aimed towards Uber.",
+      image: "/projects/Uber-Stall-Guard.png",
+      tech: ["React", "Leaflet.js", "Google Maps SDK", "Python", "FastAPI", "Uvicorn", "scikit-learn", "NumPy", "Pandas", "joblib", "geopy"],
+      url: "https://github.com/Insight14/Uber-Stall-Guard",
+    },
+    {
       title: "CoDriver",
       description:
         "A conversational AI assistant mobile app designed to keep you safe, focused, and engaged on the road. It monitors your behavior, provides real-time feedback while driving, and engages conversations about your route.",
@@ -37,20 +45,28 @@ export const Projects = () => {
       url: "https://devpost.com/software/aegis-d60u4e",
     },
     {
-      title: "SubSlash",
-      description:
-        "AI subscription manager that helps you track subscriptions and get suggestions on them. It uses a combination of LLMs and web scraping to analyze your subscriptions and provide insights on how to optimize them.",
-      image: "/projects/SubSlash.png",
-      tech: ["React Native", "Python", "Express.js", "Node.js", "Supabase", "Claude", "BeautifulSoap"],
-      url: "https://github.com/Insight14/SubSlash",
-    },
-    {
       title: "MedVisit",
       description:
         "MedVisit is a comprehensive healthcare consultation platform that bridges the gap between doctors and patients through intelligent AI-powered analysis using SOAP format and accessible reporting through an intuitive EMR dashboard.",
       imageStyle: "url('/projects/medvisit-diagram.png'), url('/projects/ai-saas.png')",
       tech: ["Python", "React.js", "Llama 3.1", "TwelveLabs", "FastAPI"],
       url: "https://devpost.com/software/medvisit",
+    },
+    {
+      title: "PokeBaise",
+      description:
+        "PokeBaise is a Pokémon TCG Pocket AI Deck Builder that allows users to create and manage their own Pokémon decks. It features a user-friendly interface, card search functionality, and deck validation to ensure compliance with official Pokémon TCG rules.",
+      image: "/projects/pokebaise.png",
+      tech: ["React", "Gemini API", "Web Scraping", "Databases"],
+      url: "https://pokebaise.vercel.app/#",
+    },
+    {
+      title: "SubSlash",
+      description:
+        "AI subscription manager that helps you track subscriptions and get suggestions on them. It uses a combination of LLMs and web scraping to analyze your subscriptions and provide insights on how to optimize them.",
+      image: "/projects/SubSlash.png",
+      tech: ["React Native", "Python", "Express.js", "Node.js", "Supabase", "Claude", "BeautifulSoap"],
+      url: "https://github.com/Insight14/SubSlash",
     },
     {
       title: "Ask-and-Forget",

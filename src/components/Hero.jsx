@@ -185,14 +185,12 @@ export const Hero = () => {
             <span className="subtitle-orange">UT Dallas</span>
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I am a college student and an aspiring AI & Security Engineer based in Dallas, TX. 
-            My current interests lie in web and app development, with a good knowledge of React, 
-            Python, REST API's, etc. 
+            I am passionate about building AI-driven systems that solve real-world problems through automation at scale. My main interest lies in the intersection of artificial intelligence and cybersecurity, especially designing intelligent security systems, automated threat analysis, adaptive encryption methods, and AI-powered infrastructure that can respond to attacks in real time.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
-              href="/projects/Sourish_Resume.pdf"
+              href="/projects/SourishR_Resume2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-primary"
