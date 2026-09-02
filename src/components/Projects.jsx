@@ -21,6 +21,14 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "442ools",
+      description:
+        "Football Computer Vision Project that analyzes players, goalkeepers, and referees to predict plays such as passing and goalscoring opportunities in real-time.",
+      image: "/projects/442ools.png",
+      tech: ["Python", "OpenCV", "YOLOv8", "scikit-learn", "NumPy", "Pandas", "Matplotlib", "ultralytics", "CVAT"],
+      url: "https://github.com/Insight14/442ools",
+    },
+    {
       title: "Uber Stall Guard",
       description:
         "AI-based prototype that detects driver-stalling behavior on rideshare trips and auto-waives rider cancellation fees. Independent concept project, not affiliated with Uber, but aimed towards Uber.",
@@ -35,6 +43,14 @@ export const Projects = () => {
       image: "/projects/CoDriver.png",
       tech: ["React Native", "Node.js", "Express.js", "MongoDB", "Claude", "Google Maps API", "OpenWeather API", "Spotify API", "ElevenLabs"],
       url: "https://github.com/acm-projects/CoDriver",
+    },
+    {
+      title: "Comment Sense",
+      description:
+        "Chrome extension that re-ranks YouTube search results by analyzing comment sentiment — surfacing videos praised for clarity or confirmed as legit, and flagging ones with confusion or clickbait complaints, instead of sorting by views.",
+      image: "/projects/comment-sense.png",
+      tech: ["Javascript", "Google Cloud SDK", "Gemini API"],
+      url: "https://github.com/Insight14/Comment-Sense",
     },
     {
       title: "Aegis",
